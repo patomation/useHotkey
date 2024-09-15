@@ -1,7 +1,7 @@
 import * as React from "react";
 import { act } from "@testing-library/react";
 import ReactDOM from "react-dom/client";
-import { useHook } from "./index";
+import { useHotkey } from "./index";
 
 let container = null;
 beforeEach(() => {
@@ -19,11 +19,11 @@ const Consumer = (): React.ReactElement => {
   interface State {
     color: string;
   }
-  const { foo } = useHook();
-  return <div>{foo}</div>;
+  useHotkey("f", () => {});
+  return <div>{"bar"}</div>;
 };
 
-describe("useHook", () => {
+describe("useHotkey", () => {
   it("works", () => {
     act(() => {
       ReactDOM.createRoot(container).render(<Consumer />);

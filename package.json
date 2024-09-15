@@ -1,6 +1,6 @@
 {
-  "name": "@patomation/useHook",
-  "version": "1.0.0",
+  "name": "useHotkey",
+  "version": "0.0.0-beta1",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "files": [
@@ -15,6 +15,7 @@
     "watch:test": "nodemon --watch ./src -x \"npm run coverage\" -e js,ts,tsx",
     "test": "jest",
     "coverage": "jest --coverage",
+    "example": "parcel ./src/example/index.html --no-cache",
     "release": "standard-version",
     "publish": "git push --follow-tags",
     "prettier": "prettier --write ."
@@ -28,7 +29,6 @@
   "devDependencies": {
     "@babel/core": "7.25.2",
     "@babel/preset-env": "7.25.4",
-    "@babel/preset-react": "7.24.7",
     "@babel/preset-typescript": "7.24.7",
     "@commitlint/cli": "19.5.0",
     "@commitlint/config-conventional": "19.5.0",
@@ -45,8 +45,10 @@
     "jsdom-global": "3.0.2",
     "nodemon": "3.1.4",
     "nyc": "17.0.0",
+    "parcel": "^2.12.0",
     "prettier": "3.3.3",
     "pretty-quick": "4.0.0",
+    "process": "^0.11.10",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "standard-version": "^9.5.0",
@@ -79,7 +81,7 @@
   "description": "TypeScript NPM Package Starter",
   "repository": {
     "type": "git",
-    "url": "git://github.com/patomation/useHook.git"
+    "url": "git://github.com/patomation/useHotkey.git"
   },
   "public": true,
   "keywords": [
@@ -87,5 +89,8 @@
   ],
   "overrides": {
     "@types/scheduler": "< 0.23.0"
+  },
+  "dependencies": {
+    "@patomation/hotkey": "^1.12.0"
   }
 }

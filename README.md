@@ -3,16 +3,16 @@
 ## Installation
 
 ```
-yarn add @patomation/useHook
+yarn add @patomation/useHotkey
 ```
 
 ## Usage
 
 ```javascript
-import { useHook } from "@patomation/useHook";
+import { useHotkey } from "@patomation/useHotkey";
 
 const Component = (): React.ReactElement => {
-  const { foo } = useHook();
+  const { foo } = useHotkey();
 
   return <div>{foo}</div>;
 };
