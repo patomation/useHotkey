@@ -1,0 +1,91 @@
+{
+  "name": "@patomation/useHook",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "private": false,
+  "sidEffects": false,
+  "scripts": {
+    "prepare": "husky",
+    "build": "tsc",
+    "watch:build": "nodemon --watch ./src -x \"npm run build\" -e js,ts,tsx",
+    "watch:test": "nodemon --watch ./src -x \"npm run coverage\" -e js,ts,tsx",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "release": "standard-version",
+    "publish": "git push --follow-tags",
+    "prettier": "prettier --write ."
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm run test && npm run lint"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "7.25.2",
+    "@babel/preset-env": "7.25.4",
+    "@babel/preset-react": "7.24.7",
+    "@babel/preset-typescript": "7.24.7",
+    "@commitlint/cli": "19.5.0",
+    "@commitlint/config-conventional": "19.5.0",
+    "@testing-library/react": "^16.0.1",
+    "@types/jest": "^29.5.13",
+    "@types/node": "22.5.5",
+    "@types/react": "18.3.5",
+    "@types/webpack-env": "1.18.5",
+    "babel-jest": "29.7.0",
+    "concurrently": "9.0.1",
+    "husky": "^9.1.6",
+    "jest": "29.7.0",
+    "jsdom": "25.0.0",
+    "jsdom-global": "3.0.2",
+    "nodemon": "3.1.4",
+    "nyc": "17.0.0",
+    "prettier": "3.3.3",
+    "pretty-quick": "4.0.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "standard-version": "^9.5.0",
+    "ts-jest": "29.2.5",
+    "tsconfigs": "5.0.0",
+    "typescript": "5.6.2"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "author": "Patrick Kelly",
+  "license": "MIT",
+  "description": "TypeScript NPM Package Starter",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/patomation/useHook.git"
+  },
+  "public": true,
+  "keywords": [
+    "typescript"
+  ],
+  "overrides": {
+    "@types/scheduler": "< 0.23.0"
+  }
+}

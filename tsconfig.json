@@ -1,0 +1,17 @@
+{
+  "extends": "tsconfigs/browser-executable",
+  "compilerOptions": {
+    "strictFunctionTypes": false,
+    "module": "commonjs", // allows us to use imports in test files. rollup.config should override this to ESNext
+    "target": "es6",
+    "jsx": "react",
+    "strict": false,
+    "noImplicitAny": false,
+    "outDir": "lib",
+    "declaration": true,
+    "sourceMap": true,
+    "types": ["jest"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.test.ts", "**/*.d.ts", "**/* copy*"]
+}
