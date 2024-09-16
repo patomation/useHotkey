@@ -1,6 +1,6 @@
 {
   "name": "@patomation/usehotkey",
-  "version": "0.0.0-beta4",
+  "version": "0.0.0-beta5",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "files": [
