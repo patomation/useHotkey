@@ -1,19 +1,20 @@
-# React NPM Package Starter
+# useHotkey
 
 ## Installation
 
 ```
-yarn add @patomation/useHotkey
+npm i @patomation/usehotkey
 ```
 
 ## Usage
 
 ```javascript
-import { useHotkey } from "@patomation/useHotkey";
+import { useHotkey } from "@patomation/usehotkey";
 
 const Component = (): React.ReactElement => {
-  const { foo } = useHotkey();
-
-  return <div>{foo}</div>;
+  useHotkey("f", () => {
+    // do something
+  });
+  ...
 };
 ```
