@@ -4,25 +4,17 @@ import { useHotkey } from "../index";
 
 function Component() {
   const [count, setCount] = useState(0);
-  const [preventDefault, setPreventDefault] = useState(false);
   useHotkey(
     "a",
-    (event) => {
-      if (preventDefault) {
-        event.preventDefault();
-      }
+    () => {
       setCount((s) => s + 1);
     },
-    [preventDefault],
+    [],
   );
 
   return (
     <div>
       <p>Hotkey "a" pressed {count} times.</p>
-
-      <button onClick={() => setPreventDefault((s) => !s)}>
-        {preventDefault ? "preventDefault ON" : "preventDefault OFF"}
-      </button>
     </div>
   );
 }

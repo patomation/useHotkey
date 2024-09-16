@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { hotkey } from "@patomation/hotkey/src/index";
+import { hotkey } from "@patomation/hotkey";
 
 export function useHotkey(
   command: string,
-  callback: (event: KeyboardEvent) => void,
+  callback: () => void,
   deps: React.DependencyList = [],
 ) {
   useEffect(() => {
