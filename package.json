@@ -1,6 +1,6 @@
 {
   "name": "@patomation/usehotkey",
-  "version": "0.0.0-beta5",
+  "version": "0.0.1",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "files": [
@@ -82,12 +82,14 @@
   },
   "public": true,
   "keywords": [
-    "typescript", "react", "hook"
+    "typescript",
+    "react",
+    "hook"
   ],
   "overrides": {
     "@types/scheduler": "< 0.23.0"
   },
   "dependencies": {
-    "@patomation/hotkey": "^1.12.0"
+    "@patomation/hotkey": "1.12.1"
   }
 }
