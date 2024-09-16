@@ -7,7 +7,7 @@
     "jsx": "react",
     "strict": false,
     "noImplicitAny": false,
-    "outDir": "lib",
+    "outDir": "build",
     "declaration": true,
     "sourceMap": true,
     "types": ["jest"]
